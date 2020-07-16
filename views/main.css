@@ -1,0 +1,19 @@
+main{
+  background: grey;
+}
+
+main.row > div {
+  background: white;
+}
+
+footer.row > div {
+  background: #343a40;
+}
+
+.under-header{
+  margin: 5px;
+}
+
+.card{
+    margin: 10px;
+}

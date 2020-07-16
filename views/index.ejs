@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>React App</title>
+  </head>
+
+
+ 
+    <header class="row bg-primary">
+      <nav class="navbar justify-content-center navbar-expand-lg navbar-dark bg-primary navbar-expand col-8 col-sm-10">   
+        <div >
+          <div class="navbar-nav ">
+                <a class="nav-item nav-link active" href="#">Услуги</a>
+                <a class="nav-item nav-link" href="#">Цены</a>
+                <a class="nav-item nav-link" href="#">О компании</a>
+                <a class="nav-item nav-link" href="#">Контакты</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <main class="row justify-content-center">
+       
+        <% for(let i=0; i < products.length; i++){ %>
+        <div class="card" style="width: 18rem;">
+         
+            <% let product = products[i]; %>
+          <img src= "<%= product.img %>" class="card-img-top" alt="..."/>
+          <div class="card-body">
+            <h5 class="card-title"><%= product.title %></h5>
+            <p class="card-text"><%= product.description %></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= product.price %></li>
+          </ul>
+           <div class="card-body">
+            <a class="btn btn-primary" href="/product/<%=product.key%>-<%=product.slug%>" role="button">Купить</a>
+          </div>
+        
+        </div>
+        <% } %>
+       
+    </main>
+    
+    <footer class="row">
+      <nav class="navbar fixed-bottom navbar-dark bg-dark col-12">
+        <div class="navbar-nav ">
+          <a class="nav-item nav-link" href="#"> @Codery.camp, 2019</a>
+        </div>
+      </nav>
+    </footer>
+ 
+
+</html>
